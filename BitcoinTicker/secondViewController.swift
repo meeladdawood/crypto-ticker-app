@@ -50,6 +50,7 @@ class secondViewController : UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCoin = indexPath.row
         performSegue(withIdentifier: "sendData", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
