@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="YQa-qt-f6t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,6 +14,89 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="yYd-sf-RXg">
+            <objects>
+                <viewController id="YQa-qt-f6t" customClass="secondViewController" customModule="BitcoinTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hDA-rm-0Qy"/>
+                        <viewControllerLayoutGuide type="bottom" id="AFA-mR-CrC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iqq-ZE-lv9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0e5-zj-gee">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="100" id="7sk-Ci-tw1" customClass="CustomTableViewCell" customModule="BitcoinTicker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7sk-Ci-tw1" id="Moc-C1-ii1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFG-4y-TF3">
+                                                    <rect key="frame" x="10" y="5" width="355" height="89.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" highlightedImage="btc" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-Lo-Ml6">
+                                                            <rect key="frame" x="0.0" y="5" width="80" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="0qx-jY-CPK"/>
+                                                                <constraint firstAttribute="height" constant="80" id="zDr-UL-F01"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJA-gZ-Csh">
+                                                            <rect key="frame" x="88" y="8" width="259" height="73.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="bj5-Lo-Ml6" firstAttribute="centerY" secondItem="DFG-4y-TF3" secondAttribute="centerY" id="4ai-2f-vm4"/>
+                                                        <constraint firstItem="fJA-gZ-Csh" firstAttribute="top" secondItem="DFG-4y-TF3" secondAttribute="top" constant="8" id="6nb-xm-dZk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fJA-gZ-Csh" secondAttribute="trailing" constant="8" id="aLZ-9M-utp"/>
+                                                        <constraint firstItem="bj5-Lo-Ml6" firstAttribute="leading" secondItem="DFG-4y-TF3" secondAttribute="leading" id="gGQ-ok-r8P"/>
+                                                        <constraint firstAttribute="bottom" secondItem="fJA-gZ-Csh" secondAttribute="bottom" constant="8" id="lmv-23-wzk"/>
+                                                        <constraint firstItem="fJA-gZ-Csh" firstAttribute="leading" secondItem="bj5-Lo-Ml6" secondAttribute="trailing" constant="8" id="xG0-Di-SvZ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DFG-4y-TF3" firstAttribute="leading" secondItem="Moc-C1-ii1" secondAttribute="leading" constant="10" id="AGi-Bd-h75"/>
+                                                <constraint firstAttribute="bottom" secondItem="DFG-4y-TF3" secondAttribute="bottom" constant="5" id="Szg-GE-x1U"/>
+                                                <constraint firstAttribute="trailing" secondItem="DFG-4y-TF3" secondAttribute="trailing" constant="10" id="YMw-Wk-aAA"/>
+                                                <constraint firstItem="DFG-4y-TF3" firstAttribute="top" secondItem="Moc-C1-ii1" secondAttribute="top" constant="5" id="Zqz-dr-drY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellView" destination="DFG-4y-TF3" id="Pm2-jR-jka"/>
+                                            <outlet property="cryptoImage" destination="bj5-Lo-Ml6" id="3pN-Z6-pkg"/>
+                                            <outlet property="cryptoLabel" destination="fJA-gZ-Csh" id="1Po-vW-IVW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0e5-zj-gee" firstAttribute="top" secondItem="hDA-rm-0Qy" secondAttribute="bottom" id="00P-CP-vjg"/>
+                            <constraint firstAttribute="trailing" secondItem="0e5-zj-gee" secondAttribute="trailing" id="Ced-Ng-XGM"/>
+                            <constraint firstItem="0e5-zj-gee" firstAttribute="leading" secondItem="iqq-ZE-lv9" secondAttribute="leading" id="FkV-5r-7S1"/>
+                            <constraint firstItem="AFA-mR-CrC" firstAttribute="top" secondItem="0e5-zj-gee" secondAttribute="bottom" id="Odc-71-MVA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="0e5-zj-gee" id="WnL-vg-onF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6X2-PJ-sPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369.5" y="338.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -84,6 +167,7 @@
                             <constraint firstItem="H4g-qN-MbT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s6n-dl-ToY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ud6-sg-8Af"/>
                     <connections>
                         <outlet property="bitcoinPriceLabel" destination="Jg7-Dt-rnc" id="LGh-mP-7xe"/>
                         <outlet property="currencyPicker" destination="ZGz-pe-AwG" id="MaK-nO-flZ"/>
@@ -96,5 +180,6 @@
     </scenes>
     <resources>
         <image name="bitcoin" width="335" height="335"/>
+        <image name="btc" width="42" height="42"/>
     </resources>
 </document>
