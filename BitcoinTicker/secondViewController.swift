@@ -16,6 +16,18 @@ class secondViewController : UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func viewDidLoad() {
         
         tableView.delegate = self
@@ -52,6 +64,7 @@ class secondViewController : UIViewController, UITableViewDelegate, UITableViewD
         performSegue(withIdentifier: "sendData", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     
     
 }
