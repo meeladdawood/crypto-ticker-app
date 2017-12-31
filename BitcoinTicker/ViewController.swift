@@ -15,7 +15,6 @@ import SwiftyJSON
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
-    
     let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/"
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     let currencySymbolArray = ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"]
@@ -24,7 +23,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     //Pre-setup IBOutlets
     @IBOutlet weak var bitcoinPriceLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
-    
     @IBOutlet weak var cryptoImage: UIImageView!
     
     
@@ -51,9 +49,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         finalURL = baseURL + cryptos[selectedCoin].uppercased() + currencyArray[row]
-        print(finalURL)
         getCryptoData(url: finalURL, row : row)
     }
 
@@ -69,14 +65,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         Alamofire.request(url, method: .get)
             .responseJSON { response in
                 if response.result.isSuccess {
-
-                    print("Sucess! Got the Crypto data")
                     let cryptoJSON : JSON = JSON(response.result.value!)
 
                     self.updateCryptoData(json: cryptoJSON , row : row)
 
                 } else {
-                    print("Error: \(String(describing: response.result.error))")
                     self.bitcoinPriceLabel.text = "Unavaliable"
                 }
             }
@@ -93,14 +86,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func updateCryptoData(json : JSON ,  row : Int) {
         
         if let priceResult = json["ask"].double {
-        
-            
-          print(priceResult)
-
           bitcoinPriceLabel.text = "\(currencySymbolArray[row])" + String(priceResult)
         }
         
-//        updateUIWithWeatherData()
     }
     
 
