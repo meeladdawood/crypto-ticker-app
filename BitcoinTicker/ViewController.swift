@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     
-    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
+    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/"
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     let currencySymbolArray = ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"]
     var finalURL = ""
@@ -25,12 +25,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var bitcoinPriceLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
-
+    @IBOutlet weak var cryptoImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
+        
+        cryptoImage.image = UIImage(named : cryptos[selectedCoin]) 
         
     }
 
@@ -48,7 +51,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        finalURL = baseURL + currencyArray[row]
+        
+        finalURL = baseURL + cryptos[selectedCoin].uppercased() + currencyArray[row]
+        print(finalURL)
         getCryptoData(url: finalURL, row : row)
     }
 
@@ -72,7 +77,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
                 } else {
                     print("Error: \(String(describing: response.result.error))")
-                    self.bitcoinPriceLabel.text = "Connection Issues"
+                    self.bitcoinPriceLabel.text = "Unavaliable"
                 }
             }
 

@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+let cryptos = ["btc","bch","ltc","eth","xrp","xmr","zec"]
+var selectedCoin = 0
+
 class secondViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,9 +22,9 @@ class secondViewController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
     }
     
-    let cryptos = ["btc","bch","ltc","eth","dash","xrp","xmr"]
     
-    let cryptoNames = ["Bitcoin","Bitcoin Cash","Litecoin","Ethereum","Dash","Ripple","Monero"]
+    
+    let cryptoNames = ["Bitcoin","Bitcoin Cash","Litecoin","Ethereum","Ripple","Monero", "Zcash"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cryptos.count
@@ -44,6 +47,10 @@ class secondViewController : UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCoin = indexPath.row
+        performSegue(withIdentifier: "sendData", sender: self)
+    }
     
     
 }
