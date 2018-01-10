@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Crypto.Ticker Launch Screen Yellow:Green" translatesAutoresizingMaskIntoConstraints="NO" id="ut3-lb-CLh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Crypto.Ticker Launch Screen Yellow:Green-1" translatesAutoresizingMaskIntoConstraints="NO" id="ut3-lb-CLh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Crypto.Ticker Launch Screen Yellow:Green" width="375" height="667"/>
+        <image name="Crypto.Ticker Launch Screen Yellow:Green-1" width="375" height="667"/>
     </resources>
 </document>
