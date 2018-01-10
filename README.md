@@ -1,6 +1,9 @@
 # Crypto.Ticker
-Learn to make iOS Apps with [The App Brewery](https://www.appbrewery.co) 📱 | Project Stub | (Swift 4.0/Xcode 9) - Bitcoin Ticker App
+An for cryptocurrency trackers and traders. Get a quick glance at the price of the hottest cryptocurrencies.
 
+
+
+Stay connected and aware of cryptocurrency prices. Crypto.Ticker is a simple application that allows you to track the price of your cryptocurrencies on a day-to-day basis. Crypto.Ticker offers live price data on 7 of your favorite cryptocurrencies.
 
 ## Finished App
 ![Finished App](http://i.giphy.com/l0HlQGzz2MQCKIBI4.gif)
