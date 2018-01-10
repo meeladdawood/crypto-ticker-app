@@ -1,5 +1,5 @@
 # Crypto.Ticker
-An for cryptocurrency trackers and traders. Get a quick glance at the price of the hottest cryptocurrencies.
+An app for cryptocurrency trackers and traders. Get a quick glance at the price of the hottest cryptocurrencies.
 
 
 
