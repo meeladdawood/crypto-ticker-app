@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,28 +19,55 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Crypto.Ticker Launch Screen Yellow:Green-1" translatesAutoresizingMaskIntoConstraints="NO" id="ut3-lb-CLh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Screen Background" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-Nz-6JC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3R4-uz-scT" userLabel="Logo View">
+                                <rect key="frame" x="58" y="96" width="258" height="392"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="bitcoin Launch Screen Logo" translatesAutoresizingMaskIntoConstraints="NO" id="N1c-s5-HBd">
+                                        <rect key="frame" x="4" y="33" width="250" height="226"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="Crypto.Ticker Logo" translatesAutoresizingMaskIntoConstraints="NO" id="jFi-2F-ial">
+                                        <rect key="frame" x="35" y="340" width="186" height="52"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jFi-2F-ial" secondAttribute="bottom" id="Hpp-xf-PKe"/>
+                                    <constraint firstItem="N1c-s5-HBd" firstAttribute="top" secondItem="3R4-uz-scT" secondAttribute="top" constant="33" id="Iko-fz-NRR"/>
+                                    <constraint firstAttribute="bottom" secondItem="N1c-s5-HBd" secondAttribute="bottom" constant="133" id="Oe3-Oz-F0F"/>
+                                    <constraint firstItem="N1c-s5-HBd" firstAttribute="leading" secondItem="3R4-uz-scT" secondAttribute="leading" constant="4" id="PA9-Lb-GoX"/>
+                                    <constraint firstAttribute="trailing" secondItem="jFi-2F-ial" secondAttribute="trailing" constant="37" id="k4I-mD-RX5"/>
+                                    <constraint firstAttribute="trailing" secondItem="N1c-s5-HBd" secondAttribute="trailing" constant="4" id="keF-MA-6Pj"/>
+                                    <constraint firstItem="jFi-2F-ial" firstAttribute="top" secondItem="3R4-uz-scT" secondAttribute="top" constant="340" id="lPY-z5-Vc7"/>
+                                    <constraint firstItem="jFi-2F-ial" firstAttribute="leading" secondItem="3R4-uz-scT" secondAttribute="leading" constant="35" id="pjk-tA-jKm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ut3-lb-CLh" secondAttribute="bottom" id="EaZ-t1-8qS"/>
-                            <constraint firstItem="ut3-lb-CLh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LEJ-T6-PRl"/>
-                            <constraint firstAttribute="trailing" secondItem="ut3-lb-CLh" secondAttribute="trailing" id="ZbK-KE-6nS"/>
-                            <constraint firstItem="ut3-lb-CLh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="lhc-nx-PXZ"/>
+                            <constraint firstAttribute="bottom" secondItem="rQ1-Nz-6JC" secondAttribute="bottom" constant="-10" id="8iU-QW-UZw"/>
+                            <constraint firstItem="3R4-uz-scT" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="76" id="C6M-t4-a9r"/>
+                            <constraint firstItem="3R4-uz-scT" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="42" id="DUi-1U-DS9"/>
+                            <constraint firstAttribute="trailing" secondItem="rQ1-Nz-6JC" secondAttribute="trailing" id="PX4-lq-ec4"/>
+                            <constraint firstItem="rQ1-Nz-6JC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="aBh-gw-X9c"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="3R4-uz-scT" secondAttribute="bottom" constant="179" id="aRs-1h-Xl6"/>
+                            <constraint firstItem="rQ1-Nz-6JC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="mnl-VL-INW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3R4-uz-scT" secondAttribute="trailing" constant="43" id="rk1-h4-4AM"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.399999999999999" y="372.41379310344831"/>
+            <point key="canvasLocation" x="50.399999999999999" y="371.96401799100454"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Crypto.Ticker Launch Screen Yellow:Green-1" width="375" height="667"/>
+        <image name="Crypto.Ticker Logo" width="173" height="49"/>
+        <image name="Launch Screen Background" width="375" height="667"/>
+        <image name="bitcoin Launch Screen Logo" width="236" height="236"/>
     </resources>
 </document>
