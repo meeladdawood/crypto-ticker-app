@@ -112,6 +112,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Crypto.Ticker Coin Screen Background" translatesAutoresizingMaskIntoConstraints="NO" id="HgT-e1-onB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-qN-MbT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -121,15 +124,6 @@
                                             <constraint firstAttribute="height" constant="216" id="ejO-o3-Ore"/>
                                         </constraints>
                                     </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-Dt-rnc">
-                                        <rect key="frame" x="8" y="248" width="359" height="110"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="110" id="YfF-6e-Aok"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="54"/>
-                                        <color key="textColor" red="0.94509803921568625" green="0.65490196078431373" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-SU-qjY">
                                         <rect key="frame" x="0.0" y="72" width="375" height="170"/>
                                         <subviews>
@@ -147,12 +141,20 @@
                                             <constraint firstAttribute="height" constant="170" id="wlw-GP-n0w"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-Dt-rnc">
+                                        <rect key="frame" x="8" y="278" width="359" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="YfF-6e-Aok"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="54"/>
+                                        <color key="textColor" red="0.94509803921568625" green="0.65490196078431373" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.070588235294117646" green="0.52941176470588236" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="c1V-SU-qjY" firstAttribute="top" secondItem="H4g-qN-MbT" secondAttribute="top" constant="72" id="FRT-xJ-oZD"/>
                                     <constraint firstItem="c1V-SU-qjY" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" id="Gjz-QA-PvA"/>
-                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="top" secondItem="c1V-SU-qjY" secondAttribute="bottom" constant="6" id="cpq-zw-rnu"/>
+                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="top" secondItem="c1V-SU-qjY" secondAttribute="bottom" constant="36" id="cpq-zw-rnu"/>
                                     <constraint firstAttribute="bottom" secondItem="ZGz-pe-AwG" secondAttribute="bottom" constant="8" id="gQW-rN-B2C"/>
                                     <constraint firstAttribute="trailing" secondItem="ZGz-pe-AwG" secondAttribute="trailing" id="han-oI-JPz"/>
                                     <constraint firstItem="Jg7-Dt-rnc" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" constant="8" id="mgD-eu-Zzd"/>
@@ -166,7 +168,11 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H4g-qN-MbT" secondAttribute="bottom" id="2oO-RC-J2Q"/>
                             <constraint firstItem="H4g-qN-MbT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nj4-It-w9G"/>
+                            <constraint firstItem="HgT-e1-onB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aHM-t0-kKW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HgT-e1-onB" secondAttribute="bottom" id="bvA-sP-I2F"/>
+                            <constraint firstAttribute="trailing" secondItem="HgT-e1-onB" secondAttribute="trailing" id="gbU-tx-027"/>
                             <constraint firstAttribute="trailing" secondItem="H4g-qN-MbT" secondAttribute="trailing" id="rKb-sH-QOv"/>
+                            <constraint firstItem="HgT-e1-onB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rr3-JO-FPI"/>
                             <constraint firstItem="H4g-qN-MbT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s6n-dl-ToY"/>
                         </constraints>
                     </view>
@@ -201,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Crypto.Ticker Coin Screen Background" width="375" height="667"/>
         <image name="bitcoin" width="335" height="335"/>
     </resources>
 </document>
