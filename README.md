@@ -11,7 +11,7 @@ Quickly look up the current conversion rates of the most popular cryptocurrencie
 
 ## Finished App
 
-![Screenshots](https://raw.github.com/meeladdawood/crypto-ticker-app/master/Application\ Screenshots/App\ Store\ Final\ ScreenShots /Screen\ Shots.png)
+![Screenshots](https://raw.github.com/meeladdawood/crypto-ticker-app/master/Application%20Screenshots/App%20Store%20Final%20ScreenShots/Screen%20Shots.png)
 
 ![Finished App](http://i.giphy.com/l0HlQGzz2MQCKIBI4.gif)
 
