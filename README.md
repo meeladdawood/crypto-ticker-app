@@ -10,6 +10,9 @@ Crypto.Ticker provides price information for Bitcoin, Bitcoin Cash, Litecoin, Et
 Quickly look up the current conversion rates of the most popular cryptocurrencies with AUD/BRL/CAD/CNY/EUR/GBP/HKD/IDR/ILS/INR/JPY/MXN/NOK/NZD/PLN/RON/RUB/SEK/SGD/USD/ZAR.
 
 ## Finished App
+
+![Screenshots](https://raw.github.com/meeladdawood/crypto-ticker-app/master/Application\ Screenshots/App\ Store\ Final\ ScreenShots /Screen\ Shots.png)
+
 ![Finished App](http://i.giphy.com/l0HlQGzz2MQCKIBI4.gif)
 
 Copyright © Meelad Dawood. All rights reserved. 
