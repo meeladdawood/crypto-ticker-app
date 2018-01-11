@@ -11,9 +11,12 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import Firebase
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+
+    @IBOutlet var bannerView: GADBannerView!
     
     let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/"
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
@@ -31,7 +34,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
         
-        cryptoImage.image = UIImage(named : cryptos[selectedCoin]) 
+        cryptoImage.image = UIImage(named : cryptos[selectedCoin])
+        bannerView.adUnitID = "ca-app-pub-6915674971171900/1811031506"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         
     }
 
