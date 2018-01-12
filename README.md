@@ -13,6 +13,6 @@ Quickly look up the current conversion rates of the most popular cryptocurrencie
 
 ![Finished App](https://raw.github.com/meeladdawood/crypto-ticker-app/master/Application%20Screenshots/App%20Store%20Final%20ScreenShots/Screen%20Shots.png)
 
-### Crypto.Ticker is now available for download in the App Store under "Crypto.Ticker"
+### Crypto.Ticker is now available for download in the App Store under "CryptoTicker"
 
 Copyright © Meelad Dawood. All rights reserved. 
